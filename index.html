@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katha Löffler - Artist Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="performance.html">Performance</a>
+    <a href="news.html">News</a>
+    <a href="bio.html">Bio</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- HERO SECTION WITH VIDEO -->
+  <section class="hero">
+    <video class="hero-background" autoplay muted loop playsinline>
+      <source src="assets/20250717_125915.mp4" type="video/mp4">
+      <img src="assets/251126-53.jpg" alt="Dance Performance">
+    </video>
+    <div class="hero-content">
+      <h1 class="hero-title">katha löffler</h1>
+      <p class="hero-subtitle">dancer, artist, activist, facilitator</p>
+    </div>
+  </section>
+
+  <!-- GALLERY ROWS -->
+  <main class="gallery-section">
+
+    <!-- ROW 1: UPCOMING EVENTS -->
+    <h2 class="gallery-row-title">Upcoming Events</h2>
+    <div class="carousel-container">
+      <button class="carousel-nav prev" onclick="scrollCarousel(0, 'prev')">‹</button>
+      <div class="carousel" data-carousel="0">
+        <a href="javascript:void(0)" class="carousel-item" onclick="this.style.opacity='0.7'">
+          <img src="https://via.placeholder.com/300?text=Upcoming+Events" alt="Upcoming Events">
+          <div class="carousel-item-title">Upcoming Events</div>
+        </a>
+        <a href="caminho-do-corpo.html" class="carousel-item">
+          <img src="https://via.placeholder.com/300?text=Caminho+do+Corpo" alt="Caminho do Corpo">
+          <div class="carousel-item-title">Caminho do Corpo</div>
+        </a>
+        <a href="https://wisper.be/confessions" target="_blank" class="carousel-item">
+          <img src="https://via.placeholder.com/300?text=Confessions+of+a+Body" alt="Confessions of a Body">
+          <div class="carousel-item-title">Confessions of a Body</div>
+        </a>
+      </div>
+      <button class="carousel-nav next" onclick="scrollCarousel(0, 'next')">›</button>
+    </div>
+
+    <!-- ROW 2: CUERPO TIERRA -->
+    <h2 class="gallery-row-title">Cuerpo Tierra</h2>
+    <div class="carousel-container">
+      <button class="carousel-nav prev" onclick="scrollCarousel(1, 'prev')">‹</button>
+      <div class="carousel" data-carousel="1">
+        <a href="cuerpo-tierra.html" class="carousel-item">
+          <img src="https://via.placeholder.com/300?text=Cuerpo+Tierra" alt="Cuerpo Tierra">
+          <div class="carousel-item-title">Cuerpo Tierra</div>
+        </a>
+        <a href="pies-sucios.html" class="carousel-item">
+          <img src="https://via.placeholder.com/300?text=Pies+Sucios" alt="Pies Sucios">
+          <div class="carousel-item-title">Pies Sucios</div>
+        </a>
+        <a href="javascript:void(0)" class="carousel-item" onclick="alert('More content coming soon')">
+          <img src="https://via.placeholder.com/300?text=Title+3" alt="Title 3">
+          <div class="carousel-item-title">Title 3</div>
+        </a>
+      </div>
+      <button class="carousel-nav next" onclick="scrollCarousel(1, 'next')">›</button>
+    </div>
+
+    <!-- ROW 3: PERFORMANCE -->
+    <h2 class="gallery-row-title">Performance</h2>
+    <div class="carousel-container">
+      <button class="carousel-nav prev" onclick="scrollCarousel(2, 'prev')">‹</button>
+      <div class="carousel" data-carousel="2">
+        <a href="performance.html" class="carousel-item">
+          <img src="assets/251126-53.jpg" alt="Performance">
+          <div class="carousel-item-title">Performance</div>
+        </a>
+        <a href="decapagem.html" class="carousel-item">
+          <img src="assets/decapagem1.jpg" alt="Decapagem">
+          <div class="carousel-item-title">Decapagem</div>
+        </a>
+        <a href="loops-of-belonging.html" class="carousel-item">
+          <img src="https://via.placeholder.com/300?text=Loops+of+Belonging" alt="Loops of Belonging">
+          <div class="carousel-item-title">Loops of Belonging</div>
+        </a>
+        <!-- Placeholder images for scrolling -->
+        <a href="javascript:void(0)" class="carousel-item" onclick="alert('More content coming soon')">
+          <img src="https://via.placeholder.com/300?text=Placeholder+4" alt="Placeholder 4">
+          <div class="carousel-item-title">Placeholder 4</div>
+        </a>
+        <a href="javascript:void(0)" class="carousel-item" onclick="alert('More content coming soon')">
+          <img src="https://via.placeholder.com/300?text=Placeholder+5" alt="Placeholder 5">
+          <div class="carousel-item-title">Placeholder 5</div>
+        </a>
+        <a href="javascript:void(0)" class="carousel-item" onclick="alert('More content coming soon')">
+          <img src="https://via.placeholder.com/300?text=Placeholder+6" alt="Placeholder 6">
+          <div class="carousel-item-title">Placeholder 6</div>
+        </a>
+        <a href="javascript:void(0)" class="carousel-item" onclick="alert('More content coming soon')">
+          <img src="https://via.placeholder.com/300?text=Placeholder+7" alt="Placeholder 7">
+          <div class="carousel-item-title">Placeholder 7</div>
+        </a>
+        <a href="javascript:void(0)" class="carousel-item" onclick="alert('More content coming soon')">
+          <img src="https://via.placeholder.com/300?text=Placeholder+8" alt="Placeholder 8">
+          <div class="carousel-item-title">Placeholder 8</div>
+        </a>
+        <a href="javascript:void(0)" class="carousel-item" onclick="alert('More content coming soon')">
+          <img src="https://via.placeholder.com/300?text=Placeholder+9" alt="Placeholder 9">
+          <div class="carousel-item-title">Placeholder 9</div>
+        </a>
+      </div>
+      <button class="carousel-nav next" onclick="scrollCarousel(2, 'next')">›</button>
+    </div>
+
+    <!-- ROW 4: WORKSHOPS/CLASSES -->
+    <h2 class="gallery-row-title">Workshops / Classes</h2>
+    <div class="carousel-container">
+      <button class="carousel-nav prev" onclick="scrollCarousel(3, 'prev')">‹</button>
+      <div class="carousel" data-carousel="3">
+        <a href="workshops-classes.html" class="carousel-item">
+          <img src="https://via.placeholder.com/300?text=Workshops+Classes" alt="Workshops/Classes">
+          <div class="carousel-item-title">Workshops / Classes</div>
+        </a>
+        <a href="radical-essence.html" class="carousel-item">
+          <img src="https://via.placeholder.com/300?text=Radical+Essence" alt="Radical Essence">
+          <div class="carousel-item-title">Radical Essence</div>
+        </a>
+        <a href="javascript:void(0)" class="carousel-item" onclick="alert('More content coming soon')">
+          <img src="https://via.placeholder.com/300?text=Placeholder+3" alt="Placeholder 3">
+          <div class="carousel-item-title">Placeholder 3</div>
+        </a>
+      </div>
+      <button class="carousel-nav next" onclick="scrollCarousel(3, 'next')">›</button>
+    </div>
+
+    <!-- ROW 5: DANCE ACTIVISM -->
+    <h2 class="gallery-row-title">Dance Activism</h2>
+    <div class="carousel-container">
+      <button class="carousel-nav prev" onclick="scrollCarousel(4, 'prev')">‹</button>
+      <div class="carousel" data-carousel="4">
+        <a href="dance-activism.html" class="carousel-item">
+          <img src="assets/femtaakt.jpeg" alt="Dance Activism">
+          <div class="carousel-item-title">Dance Activism</div>
+        </a>
+        <a href="feministische-tanz-aktion.html" class="carousel-item">
+          <img src="https://via.placeholder.com/300?text=Feministische+Tanz+Aktion" alt="Feministische Tanz Aktion">
+          <div class="carousel-item-title">Feministische Tanz Aktion</div>
+        </a>
+        <a href="dance-for-democracy.html" class="carousel-item">
+          <img src="https://via.placeholder.com/300?text=Dance+for+Democracy" alt="Dance for Democracy">
+          <div class="carousel-item-title">Dance for Democracy</div>
+        </a>
+      </div>
+      <button class="carousel-nav next" onclick="scrollCarousel(4, 'next')">›</button>
+    </div>
+
+    <!-- ROW 6: PLACEHOLDER ROW -->
+    <h2 class="gallery-row-title">Placeholder Row</h2>
+    <div class="carousel-container">
+      <button class="carousel-nav prev" onclick="scrollCarousel(5, 'prev')">‹</button>
+      <div class="carousel" data-carousel="5">
+        <a href="javascript:void(0)" class="carousel-item" onclick="alert('Coming soon')">
+          <img src="https://via.placeholder.com/300?text=Title+1" alt="Title 1">
+          <div class="carousel-item-title">Title 1</div>
+        </a>
+        <a href="javascript:void(0)" class="carousel-item" onclick="alert('Coming soon')">
+          <img src="https://via.placeholder.com/300?text=Title+2" alt="Title 2">
+          <div class="carousel-item-title">Title 2</div>
+        </a>
+        <a href="javascript:void(0)" class="carousel-item" onclick="alert('Coming soon')">
+          <img src="https://via.placeholder.com/300?text=Title+3" alt="Title 3">
+          <div class="carousel-item-title">Title 3</div>
+        </a>
+      </div>
+      <button class="carousel-nav next" onclick="scrollCarousel(5, 'next')">›</button>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2024 Katha Löffler. All rights reserved.</p>
+    <p>Dancer | Artist | Activist | Facilitator</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    function scrollCarousel(index, direction) {
+      const carousels = document.querySelectorAll('[data-carousel]');
+      const carousel = carousels[index];
+      const scrollAmount = 350;
+      
+      if (direction === 'next') {
+        carousel.scrollLeft += scrollAmount;
+      } else {
+        carousel.scrollLeft -= scrollAmount;
+      }
+    }
+  </script>
+</body>
+</html>
