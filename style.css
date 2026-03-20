@@ -6,7 +6,7 @@
 :root {
   --primary-dark: #2a2a2a;
   --primary-light: #f5f5f5;
-  --accent-warm: #FF6B5B;
+  --accent-warm: #FF5533;
   --accent-rust: #E91E84;
   --text-dark: #333;
   --text-light: #f5f5f5;
@@ -20,10 +20,11 @@
 }
 
 body {
-  font-family: 'Georgia', serif;
+  font-family: 'Courier New', monospace;
   color: var(--text-dark);
   background-color: var(--primary-light);
   line-height: 1.6;
+  text-align: right;
 }
 
 /* ============================================
@@ -93,6 +94,7 @@ nav a:hover {
   max-width: 600px;
   padding: 2rem;
   margin-left: 3rem;
+  text-align: right;
 }
 
 .hero-title {
@@ -101,7 +103,7 @@ nav a:hover {
   margin-bottom: 1rem;
   font-family: 'Courier New', monospace;
   letter-spacing: 2px;
-  text-align: left;
+  text-align: right;
 }
 
 .hero-subtitle {
@@ -110,6 +112,7 @@ nav a:hover {
   font-style: italic;
   font-weight: 300;
   text-align: left;
+  font-family: 'Courier New', monospace;
 }
 
 /* ============================================
@@ -128,7 +131,7 @@ nav a:hover {
 .gallery-row-title {
   font-size: 1.3rem;
   margin-bottom: 2rem;
-  color: white;
+  color: var(--accent-warm);
   font-family: 'Courier New', monospace;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -174,23 +177,39 @@ nav a:hover {
 
 .carousel-item-title {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: rgba(0, 0, 0, 0.7);
   color: var(--accent-warm);
-  padding: 1rem;
-  text-align: center;
-  font-size: 0.95rem;
+  padding: 1.5rem;
+  text-align: left;
+  font-size: 1.9rem;
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 5;
-  border-radius: 4px;
-  min-width: 80%;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-family: 'Courier New', monospace;
+  text-transform: lowercase;
 }
 
 .carousel-item:hover .carousel-item-title {
   opacity: 1;
+}
+
+.carousel-item-subtitle {
+  display: block;
+  font-size: 0.65rem;
+  margin-top: 0.3rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  font-style: italic;
+  width: 100%;
 }
 
 .carousel-nav {
@@ -221,10 +240,11 @@ nav a:hover {
   max-width: 1200px;
   margin: 0 auto;
   padding: 3rem 2rem;
+  text-align: right;
 }
 
 .subpage-header {
-  text-align: left;
+  text-align: right;
   margin-bottom: 3rem;
   padding-bottom: 2rem;
 }
@@ -235,7 +255,7 @@ nav a:hover {
   margin-bottom: 1rem;
   font-family: 'Courier New', monospace;
   letter-spacing: 2px;
-  text-align: left;
+  text-align: right;
   color: white;
   text-transform: uppercase;
 }
@@ -244,7 +264,19 @@ nav a:hover {
   font-size: 1.1rem;
   color: var(--accent-warm);
   font-style: italic;
-  text-align: left;
+  text-align: right;
+  font-family: 'Courier New', monospace;
+}
+
+.subpage-description-en {
+  font-size: 1.1rem;
+  color: var(--accent-warm);
+  font-style: italic;
+  text-align: right;
+  margin-top: 1rem;
+  font-family: 'Courier New', monospace;
+  font-weight: 300;
+  letter-spacing: 0.5px;
 }
 
 .gallery-grid {
@@ -254,11 +286,43 @@ nav a:hover {
   margin-top: 2rem;
 }
 
+.button-group {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+.action-button {
+  background-color: var(--primary-dark);
+  color: var(--text-light);
+  border: 2px solid var(--accent-warm);
+  padding: 1rem 2rem;
+  font-size: 0.95rem;
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.action-button:hover {
+  background-color: var(--accent-warm);
+  color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 107, 91, 0.3);
+}
+
 .gallery-image {
   aspect-ratio: 1;
   overflow: hidden;
   border-radius: 4px;
   background-color: #e0e0e0;
+  position: relative;
 }
 
 .gallery-image img {
@@ -273,13 +337,212 @@ nav a:hover {
 }
 
 /* ============================================
+   CUERPO TIERRA - Fixed Background
+   ============================================ */
+
+.cuerpo-tierra-page {
+  background-image: url('assets/cuerpotierra1.jpeg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  max-width: none;
+  padding: 3rem 2rem;
+}
+
+.cuerpo-tierra-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cuerpo-tierra-page > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ============================================
+   CAMINHO DO CORPO - Fixed Background
+   ============================================ */
+
+.caminho-page {
+  background-image: url('assets/caminho0.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  max-width: none;
+  padding: 3rem 2rem;
+}
+
+.caminho-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.caminho-page > * {
+  position: relative;
+  z-index: 2;
+}
+
+.background-overlay {
+  display: none;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 5;
+  pointer-events: none;
+  padding: 1.5rem;
+  border-radius: 4px;
+}
+
+.gallery-image:hover .image-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.image-overlay p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: center;
+  font-family: 'Courier New', monospace;
+}
+
+.overlay-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.overlay-title {
+  color: var(--accent-warm);
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: lowercase;
+  font-family: 'Courier New', monospace;
+  margin: 0;
+}
+
+.overlay-subtitle {
+  color: var(--text-light);
+  font-size: 0.85rem;
+  font-style: italic;
+  font-weight: 300;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.overlay-button {
+  display: inline-block;
+  background-color: var(--accent-warm);
+  color: var(--primary-dark);
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  font-family: 'Courier New', monospace;
+  text-transform: lowercase;
+  text-decoration: none;
+  border: 2px solid var(--accent-warm);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.overlay-button:hover {
+  background-color: transparent;
+  color: var(--accent-warm);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 27, 109, 0.3);
+}
+.content-section {
+  padding: 2rem 0;
+  margin-top: 2rem;
+  text-align: right;
+}
+
+.content-section p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-family: 'Courier New', monospace;
+  color: var(--text-dark);
+}
+
+.content-section em {
+  font-style: italic;
+  color: var(--accent-warm);
+  font-weight: bold;
+}
+
+.decapagem-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+.decapagem-images {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.decapagem-images .gallery-image {
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: #e0e0e0;
+  position: relative;
+  max-width: 100%;
+}
+
+.decapagem-images .gallery-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ============================================
    FOOTER
    ============================================ */
 
 footer {
   background-color: var(--primary-dark);
   color: var(--text-light);
-  text-align: center;
+  text-align: right;
   padding: 2rem;
   margin-top: 3rem;
   font-size: 0.9rem;
@@ -288,6 +551,7 @@ footer {
 footer a {
   color: var(--accent-warm);
   text-decoration: none;
+  font-family: 'Courier New', monospace;
 }
 
 footer a:hover {
